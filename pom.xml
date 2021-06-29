@@ -13,7 +13,7 @@
 
         <!-- TODO: Change your jOOQ edition and version here -->
         <org.jooq.groupId>org.jooq</org.jooq.groupId>
-        <org.jooq.version>3.14.4</org.jooq.version>
+        <org.jooq.version>3.14.11</org.jooq.version>
 
         <!-- TODO: Change the database driver configuration here and also in AbstractTest for the tests -->
         <db.url>jdbc:h2:~/mcve</db.url>
@@ -21,7 +21,7 @@
         <db.password></db.password>
 
         <!-- TODO: Fix Java, kotlin, or scala versions -->
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <kotlin.version>1.4.20-RC</kotlin.version>
         <scala.version>2.13.1</scala.version>
     </properties>
@@ -124,7 +124,7 @@
         </pluginManagement>
 
         <plugins>
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <version>3.2.0</version>
@@ -156,9 +156,9 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <version>${kotlin.version}</version>
@@ -191,9 +191,9 @@
                 <configuration>
                     <jvmTarget>1.8</jvmTarget>
                 </configuration>
-            </plugin>
+            </plugin> -->
 
-            <plugin>
+            <!-- <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
                 <version>4.3.0</version>
@@ -205,7 +205,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -264,7 +264,7 @@
                         </configuration>
                     </execution>
 
-                    <execution>
+                    <!-- <execution>
                         <id>generate-kotlin</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -298,7 +298,7 @@
                                 </target>
                             </generator>
                         </configuration>
-                    </execution>
+                    </execution> -->
                 </executions>
             </plugin>
         </plugins>

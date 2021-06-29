@@ -29,7 +29,7 @@ class Mcve extends SchemaImpl("MCVE", DefaultCatalog.DEFAULT_CATALOG) {
   /**
    * The table <code>MCVE.TEST</code>.
    */
-  lazy val TEST = Test.TEST
+  def TEST = Test.TEST
 
   override def getCatalog: Catalog = DefaultCatalog.DEFAULT_CATALOG
 
