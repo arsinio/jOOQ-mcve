@@ -4,6 +4,7 @@ import org.jooq.mcve.java.tables.records.TestRecord;
 import org.junit.Test;
 import org.jooq.Field;
 import org.jooq.Record;
+import org.jooq.Record1;
 import org.jooq.Result;
 import org.jooq.conf.ParamType;
 import org.jooq.impl.DSL;
@@ -23,7 +24,7 @@ public class JavaTest extends AbstractTest {
                         .from(TEST)
                         .getSQL(ParamType.NAMED_OR_INLINED);
       System.out.println(sql);
-      Result<Record> res = ctx.fetch(sql);
+      Result<Record1<Integer>> res = ctx.resultQuery(sql).coerce(field_test).fetch();
 
       System.out.println(res);
 
